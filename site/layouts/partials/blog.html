@@ -1,0 +1,12 @@
+{{ partial "home-header"}}
+<div class="container">
+	<h2 class="titulo-seccion mb-2">Historias recientes</h1>
+	{{ range first 4 (where .Data.Pages "Type" "post") }}
+	<!-- <div class="ph1-ns flex w-100 hola"> -->
+		{{ .Render "li" }}
+	<!-- </div> -->
+	{{ end }}
+	<div class="text-center">
+		<a href="/post" class="btn-ver-mas btn btn-outline-primary raise">Ver más</a>
+	</div>
+</div>
